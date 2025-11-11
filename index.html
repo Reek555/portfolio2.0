@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+</head>
+<body>
+
+    <header style = "text-align: center; padding-top: 51px;">
+
+        <img src="assets/node-js-icon-5.jpg" alt="" >
+        <h2 id = "under-title"> ... طارق، مطور برمجيات</h2>
+
+
+    </header>
+
+    <section id = "tab-section" style = "margin-top: 75px;"> 
+
+        <div id = "tab-buttons">        
+            <button id = "defaultTab" onclick="showTabContent(this, 'portfolio')">
+                <i class="fa fa-briefcase"></i>
+                معرض الأعمال
+            </button>
+            <button onclick="showTabContent(this, 'profile')">
+                <i class="fa fa-user"></i>
+                الملف الشخصي
+            </button>
+        </div>
+
+        <div id = "portfolio" class="tab-content">
+            <div id = "container">
+
+                <div class = "work bordered">
+                    <a href = "works/aiBot.html">
+                    <img src="assets/Screenshot from 2025-06-19 21-04-09.png" alt="">
+                    <p>Telegram AI bot</p>
+                    </a>
+                </div>
+                
+                <div class = "work">
+                    <a href="works/vividView.html">
+                    <img src="assets/vividviewScreen2.png" alt=""  >
+                    <p>vividveiw website</p>
+                    </a>
+                </div> 
+                
+                <div class = "work">
+                    <a href = "works/portfolio.html">
+                    <img src="assets/portfolio-thumb.png" alt="">
+                    <p> Portfolio Website</p>
+                    </a>
+                </div>
+
+                <div class = "work bordered">
+                    <a href = "works/greeting.html">
+                        <img src="assets/image (73).png" alt=""  >
+                        <p>موقع لإنشاء بطاقات التهنئة</p>
+                    </a>
+                 </div>
+
+
+                <div class = "work bordered">
+                <a href = "works/doctorAPI.html">
+                    <img src="assets/work.png" alt=""  >
+                    <p> RESTful API</p>
+                 </a>
+                 </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+        <div id = "profile" class="tab-content" >
+            <div id = 'bio'>
+                <p style = "margin: 0">
+
+اسمي طارق مطور برمجيات من المغرب، لدي خبرة في تطوير عدة تطبيقات باستخدام JavaScript، Node js و Python ...، في سعي مستمر لتحسين مهاراتي وتعلم الجديد.
+
+                </p>
+            </div>
+            <div id = "container">
+
+                <button> <i class="fa fa-download"></i>  تحميل السيرة الذاتية </button>
+                <button> <i class="fa fa-envelope"></i> البريد الإلكتروني </button>
+                <button title = "لم تتم إضافته بعد"> <i class="fa fa-whatsapp"></i> الواتساب </button>
+                <button title = "لم تتم إضافته بعد"> <i class="fa fa-linkedin"></i> لينكد إن</button>
+
+
+            </div>
+
+
+
+        </div>  
+
+
+    </section>
+
+
+    <footer>
+        <p><span>&copy; </span>  taariq.connect@gmail.com</p>
+    </footer>
+
+
+    <script>
+
+
+
+
+        function showTabContent(button, tabId) {
+
+            // change the color of the clicked btn
+            let buttons = document.getElementsByTagName('button')
+
+            for (let b of buttons) {
+                b.style.backgroundColor = '';
+            }
+            button.style.backgroundColor = 'rgb(245, 245, 245)';
+
+
+            //hide all tabs and display one; 
+            let tabs = document.querySelectorAll('.tab-content');
+            for (let tab of tabs) {
+                tab.style.display = 'none';
+            }
+            const selectedTab = document.getElementById(tabId);
+            //if (selectedTab) {
+                selectedTab.style.display = 'block';
+            //}
+        }
+
+        document.getElementById('defaultTab').click(); // Simulate click to show default tab on page load
+
+        //save language choice
+
+        // function changeLang() {
+        
+        //     if (document.getElementById("lang").innerHTML == "English") {
+        //         localStorage.setItem("lang", "en")
+        //     }
+        //     else {
+        //         localStorage.setItem("lang", "ar")
+        //     }
+
+        //     window.location.reload(); 
+
+
+        // }
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html

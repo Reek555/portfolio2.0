@@ -1,0 +1,246 @@
+body {
+    font-family: 'Cairo'; 
+}
+
+
+
+#lang:hover {
+    cursor: pointer;
+}
+
+header > img {
+    width: 203px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+
+}
+
+
+/* the tab section buttons  */
+
+#tab-buttons {
+    text-align: center;
+}
+
+#tab-buttons > button {
+    background: white;
+    border: none; 
+    font-size: 20px;
+
+    cursor: pointer;
+    padding: 26px; 
+    direction: rtl;
+    font-family: inherit; 
+}
+
+#tab-buttons i {
+
+    font-size: inherit; 
+    padding-left: 4px
+
+}
+
+
+/* the protfolio section  */
+
+
+#portfolio > #container {
+
+    width: 800px; 
+    margin: auto;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+
+.work {
+    box-sizing: border-box;
+    width: 50%;
+    display: inline-block;
+    padding: 20px;
+    padding-bottom: 11px;
+    direction: rtl;
+     margin-left: -4px;        /*for managing the gap between inline blocks */
+
+
+}
+
+
+
+.bordered {
+
+    border: solid 1px #9E9E9E;;
+}
+
+.work  img {
+    width: 100%;
+    height: 266px;
+    object-fit: cover;
+}
+
+
+.work  p  {
+
+    font-size: 20px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+
+}
+
+
+/* the profile section  */
+
+
+
+#profile {
+
+    padding-top: 54px; 
+    padding-bottom: 54px;
+
+
+
+}
+
+#profile > #container {
+    width: 445px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: white;
+    padding: 51px;
+    box-sizing: border-box;
+
+
+}
+
+
+
+#bio {
+
+    font-size: 20px;
+    width: 75%;
+    margin: auto;
+    background: white;
+    padding: 29px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    direction: rtl; 
+    box-sizing: border-box;
+}
+
+
+
+
+#profile button {
+
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 16px;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    box-shadow: 6px 6px #0000003d;
+    border-radius: 5px;
+    background: orange;
+    font-family: inherit;
+    color: white
+}
+
+#profile i {
+
+    float: left;
+    padding-top: 9px;
+    font-size: 22px;
+}
+
+
+/* protfolio and profile */
+
+#portfolio, #profile, footer{
+    background: rgb(245, 245, 245); 
+}
+
+
+
+
+
+footer p {
+
+    padding: 46px;
+    text-align: center;
+    font-size: large;
+    margin: 8px
+
+}
+
+footer p span{
+    font-size: large;
+    vertical-align: middle;
+}
+
+
+
+/* condtional styling */
+
+
+
+@media screen and (max-width: 800px) {
+
+    #portfolio > #container {
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+    header > img {
+        width: 174px; 
+    }
+
+    #tab-buttons > button {
+        font-size: 18px; 
+        padding: 18px; 
+    }
+
+
+    /* portfolio part styling */
+
+    #portfolio > #container {
+        width: 90%;
+    }
+
+
+    .work {
+        width: 100%
+    }
+
+    .work:nth-child(even) {
+            border: none; 
+    }
+
+    .work:nth-child(odd) {
+            border: solid 1px black;
+    }
+
+    /* profile part styling */
+
+    #bio {
+        width: 90%
+
+
+    }
+
+    #profile #container {
+        width: 90%; 
+        padding: 24px
+    }
+
+
+
+}
+
+
+

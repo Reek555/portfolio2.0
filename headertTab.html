@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #f {
+            background: antiquewhite;
+            width: 400px;
+            height: 120px;
+            text-align: center;
+        }
+        button {
+            width: 100px
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <div id = 'f'>
+            <h1>Hello</h1>
+            <p>Some text in here</p>
+        </div>
+        <button color = "red">one</button><button color = "green">two</button><button color = "blue">three</button><button color = "yellow">four</button>
+
+
+    </div>
+
+    <script>
+
+
+
+        let buttons = document.getElementsByTagName('button')
+
+        let d = {'one': {'h': 'Hello', 'p': 'Some text in here'},
+                 'two': {'h': 'Hello2', 'p': 'Some text in here2'},
+                 'three': {'h': 'Hello3', 'p': 'Some text in here3'},
+                 'four': {'h': 'Hello4', 'p': 'Some text in here4'}};
+        
+        for (let b of buttons) {
+            b.addEventListener('click', () => {
+
+                b.style.backgroundColor = b.getAttribute('color')
+                for (let other of buttons) {
+                    if (other !== b) {
+                        other.style.backgroundColor = '';
+                    }
+                }
+            let f = document.getElementById('f');
+            f.querySelector('h1').innerText = d[b.innerText].h;
+            f.querySelector('p').innerText = d[b.innerText].p;
+            f.style.backgroundColor = b.getAttribute('color');  
+
+            });
+        }
+        
+
+    </script>
+    
+</body>
+</html>

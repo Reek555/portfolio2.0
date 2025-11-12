@@ -147,6 +147,27 @@ header > img {
     color: white
 }
 
+
+.profile-buttons {
+
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-bottom: 16px;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    box-shadow: 6px 6px #0000003d;
+    border-radius: 5px;
+    background: orange;
+    font-family: inherit;
+    color: white; 
+    text-decoration: none;
+    text-align: center;
+
+
+}
+
 #profile i {
 
     float: left;

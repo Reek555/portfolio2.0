@@ -45,48 +45,64 @@ header > img {
 /* the protfolio section  */
 
 
-#portfolio > #container {
+#portfolio  {
 
-    width: 800px; 
-    margin: auto;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
     padding-top: 55px;
     padding-bottom: 55px;
+
 }
 
 
-.work {
+#portfolio > div {
+    flex-shrink: 0;
     box-sizing: border-box;
-    width: 50%;
-    display: inline-block;
+    width: 40%;
     padding: 20px;
-    padding-bottom: 11px;
     direction: rtl;
-     margin-left: -4px;        /*for managing the gap between inline blocks */
-
-
 }
 
 
 
 .bordered {
 
-    border: solid 1px #9E9E9E;;
+    border: solid 1px #9E9E9E;
 }
 
-.work  img {
+#portfolio > div img {
     width: 100%;
     height: 266px;
     object-fit: cover;
 }
 
 
-.work  p  {
+#portfolio > div p  {
 
     font-size: 20px;
     margin-bottom: 0px;
     margin-top: 10px;
 
 }
+
+
+
+.under-desc::after {
+    content: "..."
+}
+
+
+.tag {
+    border: none;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 3px;
+    padding: 4px;
+    margin-top: 5px
+}
+
+
 
 
 /* the profile section  */
@@ -208,8 +224,8 @@ footer p span{
 
 @media screen and (max-width: 800px) {
 
-    #portfolio > #container {
-        width: 100%;
+    #portfolio > div  {
+        width: 45%;
     }
 
 }
@@ -229,22 +245,19 @@ footer p span{
 
     /* portfolio part styling */
 
-    #portfolio > #container {
-        width: 90%;
+
+    #portfolio > div {
+        width: 90%
     }
 
-
-    .work {
-        width: 100%
-    }
-
-    .work:nth-child(even) {
+    #portfolio > div:nth-child(even) {  
             border: none; 
     }
 
-    .work:nth-child(odd) {
+    #portfolio > div:nth-child(odd) {
             border: solid 1px black;
     }
+
 
     /* profile part styling */
 

@@ -1,0 +1,13 @@
+[
+    {
+
+        "fileName": "aiBot.html",
+        "title": "Telegram AI bot",
+        "assets": ["vokoscreen-2025-06-26_19-23-06.mp4", "Screenshot from 2025-06-19 21-04-09.png"],
+        "description": "My recent Project: An AI-powered Telegram bot that handles customer inquiries on behalf of a mobile store owner. * Provides specific answers based on the business data (working hours, address, products list, refund policy, etc) * remembers the context, the user doesn't need to repeat himself with every text * Communicates in the friendly tone of a welcoming assistant * Supports multiple languages, including English and Arabic * Always on — saves hours of customer support",
+        "links": {"preview": "", "github": "https://github.com/Reek555/telegram-ai-bot"},
+        "skills": ["JavaScript", "Node js", "Gemini API"]
+    }
+
+  
+]

@@ -7,23 +7,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-
-        button {
-
-            font-size: 15px;
-            background: white;
-            border: solid 1px gray;
-            padding: 6px 12px;
-            margin: 0px 5px;
+        #container {
+            display: flex;
+            border: solid black 1px;
         }
+
+
+
     </style>
 </head>
 <body>
 
-        <button title ="this is a tip ">
-            preview 
 
-        </button>
+<div class = "bordered">
+                    <a href = "works/aiBot.html">
+                    <img src="assets/Screenshot from 2025-06-19 21-04-09.png" alt="">
+                    <p>Telegram AI bot lorem ipsum dolor amet vlorem ipsum dolor amet</p>
+                    </a>
+                    
+                    <p class="under-desc" style = "font-size: small;">
+
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non dapibus justo. 
+                        Vivamus sodales turpis a ligula semper pellentesque. Aenean viverra neque eget
+                    </p>
+
+                    <div style = "margin-top: 10px;">
+                        <button class = 'tag'> JavaScript </button>
+                        <button class = 'tag'> Node js </button> 
+                        <button class = 'tag'> Gemini API </button>
+                    </div>
+
+
+
+                </div>
+
+        <script>
+
+            fetch('/data.json')
+            .then(res => res.json())
+            .then( data => {
+                    console.log(data)
+            })
+
+        </script>
 
 
 </body>

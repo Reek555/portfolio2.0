@@ -1,14 +1,89 @@
+
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Cairo'; 
+    margin: 0; 
 }
 
 
+
+/* hero */
 
 #lang:hover {
     cursor: pointer;
 }
 
-header > img {
+#hero {
+    background-image: url('../assets/monochromatic-urban-minimal-landscape.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+
+    text-align: center;
+    position: relative;
+    z-index: -1;
+    box-sizing: border-box;
+    height: 100vh;
+
+}
+
+#hero::before {
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: #5b0c0c;
+    opacity: 0.5;
+
+}
+
+#hero #hero-text {
+
+
+    text-align: center;
+    position: relative; 
+    z-index: 1;
+    padding-top: 30vh;
+    
+
+}
+
+#hero-text :nth-child(1) {
+    color: white; 
+    margin: 0; 
+    font-size: 75px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+#hero-text :nth-child(1) span {
+
+    color: orange
+
+}
+
+#hero-text :nth-child(2) {
+
+    color: white; 
+    font-size: 23px;
+    font-weight: 400;
+    font-style: normal;
+
+
+
+} 
+
+#hero > img {
     width: 203px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -17,33 +92,64 @@ header > img {
 }
 
 
-/* the tab section buttons  */
 
-#tab-buttons {
-    text-align: center;
+/* tabs */
+
+#tabs {
+
+    margin-top: -89px;
+
 }
 
-#tab-buttons > button {
-    background: white;
+.nav-bar {
+    text-align: center;
+    background-color: white;
+}
+
+.hero-tab-btns {
+    background-color: unset;
+}
+
+.tab-btn {
+    background-color: white; 
+    color: black; 
+
     border: none; 
-    font-size: 20px;
 
     cursor: pointer;
-    padding: 26px; 
-    direction: rtl;
-    font-family: inherit; 
+    padding: 31px 21px; 
+
+    font-family: 'Poppins';
+    font-size: 18px;
+
 }
 
-#tab-buttons i {
+.active-btn {
+
+    background-color: rgb(245, 245, 245); 
+
+
+
+}
+
+.hero-btn {
+
+    color: white; 
+    background: unset; 
+
+}
+
+.nav-bar i {
 
     font-size: inherit; 
-    padding-left: 4px
+    padding-right : 4px;
+
 
 }
+
 
 
 /* the protfolio section  */
-
 
 #portfolio  {
 
@@ -55,30 +161,25 @@ header > img {
 
 }
 
-
-#portfolio > div {
+.work {
     flex-shrink: 0;
     box-sizing: border-box;
     width: 40%;
     padding: 20px;
-    direction: rtl;
 }
-
-
 
 .bordered {
 
     border: solid 1px #9E9E9E;
 }
 
-#portfolio > div img {
+.work img {
     width: 100%;
     height: 266px;
     object-fit: cover;
 }
 
-
-#portfolio > div p  {
+.work p  {
 
     font-size: 20px;
     margin-bottom: 0px;
@@ -86,12 +187,9 @@ header > img {
 
 }
 
-
-
 .under-desc::after {
     content: "..."
 }
-
 
 .tag {
     border: none;
@@ -104,13 +202,11 @@ header > img {
 
 
 
-
 /* the profile section  */
-
-
 
 #profile {
 
+    display: none; 
     padding-top: 54px; 
     padding-bottom: 54px;
 
@@ -118,18 +214,17 @@ header > img {
 
 }
 
-#profile > #container {
+#profile > #links {
     width: 445px;
     margin: auto;
     margin-top: 30px;
     background-color: white;
     padding: 51px;
     box-sizing: border-box;
+    font-family: "Poppins";
 
 
 }
-
-
 
 #bio {
 
@@ -139,12 +234,8 @@ header > img {
     background: white;
     padding: 29px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    direction: rtl; 
     box-sizing: border-box;
 }
-
-
-
 
 #profile button {
 
@@ -163,8 +254,7 @@ header > img {
     color: white
 }
 
-
-.profile-buttons {
+.link-btn {
 
     cursor: pointer;
     display: block;
@@ -184,23 +274,17 @@ header > img {
 
 }
 
-#profile i {
+.link-btn i {
 
     float: left;
-    padding-top: 9px;
-    font-size: 22px;
-}
-
-
-/* protfolio and profile */
-
-#portfolio, #profile, footer{
-    background: rgb(245, 245, 245); 
+    padding-top: 2px;
+    font-size: 24px;
 }
 
 
 
 
+/* footer */
 
 footer p {
 
@@ -218,59 +302,150 @@ footer p span{
 
 
 
+
+/* common */
+
+#portfolio, #profile, footer{
+    background: rgb(245, 245, 245); 
+}
+
+
+
+
+
 /* condtional styling */
 
 
-
+/* landscape tablets */
 @media screen and (max-width: 800px) {
 
-    #portfolio > div  {
-        width: 45%;
-    }
+.work  {
+    width: 45%;
+}
+
+}
+
+/* mobile */
+@media screen and (max-width: 700px) {
+
+body {
+
+    font-size: 16px;
+}
+
+
+
+#hero {
+
+    height: 100svh;
+
+}
+
+#hero > img {
+    width: 174px; 
+}
+
+#hero-text :nth-child(1) {
+
+    font-size: 67px;
+}
+#hero-text :nth-child(2) {
+    font-size: 21px;
+
+} 
+
+
+#tabs {
+
+    margin-top: -69px;
 
 }
 
 
-@media screen and (max-width: 700px) {
+.nav-bar {
+    padding-top: 1px;
 
-    header > img {
-        width: 174px; 
-    }
+}
 
-    #tab-buttons > button {
-        font-size: 18px; 
-        padding: 18px; 
-    }
+.tab-btn {
+    font-size: inherit; 
+    padding: 22px; 
+    /* border-bottom: solid lightgray 1px; */
+}
 
+.active-btn {
+    background-color: white;
+    border: solid lightgray 1px; 
+    border-bottom: solid white 1px;
 
-    /* portfolio part styling */
+}
 
+.hero-btn {
 
-    #portfolio > div {
-        width: 90%
-    }
-
-    #portfolio > div:nth-child(even) {  
-            border: none; 
-    }
-
-    #portfolio > div:nth-child(odd) {
-            border: solid 1px black;
-    }
+    color: white; 
+    background: unset; 
+    border: none; 
+}
 
 
-    /* profile part styling */
 
-    #bio {
-        width: 90%
+.work {
+    width: 90%; 
+    padding: 10px;
+    margin-bottom: 23px;
+}
+
+.work:nth-child(even) {  
+        border: none; 
+}
+
+.work:nth-child(odd) {
+        border: solid 1px black;
+}
 
 
-    }
 
-    #profile #container {
-        width: 90%; 
-        padding: 24px
-    }
+#bio {
+    width: 100%;
+    box-shadow: unset;
+    font-size: inherit;
+
+}
+
+.link-btn {
+    font-size: inherit;
+
+}
+
+.link-btn  i {
+    padding-top: 0;
+
+}
+
+#profile #links {
+    width: 90%; 
+    padding: 24px
+}
+
+
+
+
+#portfolio, #profile, footer{
+    background: white; 
+}
+
+footer {
+    background-color: #f3f3f3;
+}
+
+
+#profile, #portfolio {
+    border-top: solid lightgray 1px;
+    margin-top: -0.7px;
+
+}
+
+
 
 
 

@@ -4,53 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <style>
+
+
         #container {
-            display: flex;
-            border: solid black 1px;
+            position: relative;
+            background: black;
+            width: 600px; 
+            height: 600px;
+        }
+
+        #demo {
+            position: absolute; 
+            background: blue;
+            width: 400px; 
+            height: 400px;
+
         }
 
 
-
     </style>
+
 </head>
 <body>
 
+    
+    <div id="container">
+            <div id = 'demo' class="cone anny"></div>            
+    </div>
 
-<div class = "bordered">
-                    <a href = "works/aiBot.html">
-                    <img src="assets/Screenshot from 2025-06-19 21-04-09.png" alt="">
-                    <p>Telegram AI bot lorem ipsum dolor amet vlorem ipsum dolor amet</p>
-                    </a>
-                    
-                    <p class="under-desc" style = "font-size: small;">
+    <script>
+        let e = document.getElementById('demo')
+        console.log (e.classList.contains('anny'))
 
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non dapibus justo. 
-                        Vivamus sodales turpis a ligula semper pellentesque. Aenean viverra neque eget
-                    </p>
-
-                    <div style = "margin-top: 10px;">
-                        <button class = 'tag'> JavaScript </button>
-                        <button class = 'tag'> Node js </button> 
-                        <button class = 'tag'> Gemini API </button>
-                    </div>
-
-
-
-                </div>
-
-        <script>
-
-            fetch('/data.json')
-            .then(res => res.json())
-            .then( data => {
-                    console.log(data)
-            })
-
-        </script>
-
+    </script>
 
 </body>
 </html>

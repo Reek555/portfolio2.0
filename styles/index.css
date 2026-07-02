@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    font-family: 'Cairo'; 
+    font-family: 'Poppins'; 
     margin: 0; 
 }
 
@@ -13,9 +13,7 @@ body {
 
 /* hero */
 
-#lang:hover {
-    cursor: pointer;
-}
+
 
 #hero {
     background-image: url('../assets/monochromatic-urban-minimal-landscape.jpg');
@@ -45,14 +43,36 @@ body {
 
 }
 
-#hero #hero-text {
+
+#top-bar {
+    background: black;
+    height: 50px;
+    position: absolute;
+    width: 100%;
+    display: flex ; 
+    justify-content: space-evenly;
+
+
+}
+
+.bar-item i, .bar-item span {
+    color: white;
+    float: left;
+    line-height: 50px;
+    padding-right: 6px;
+}
+
+
+
+#hero-text {
 
 
     text-align: center;
-    position: relative; 
+    position: absolute;
     z-index: 1;
-    padding-top: 30vh;
-    
+    padding-top: 25vh;
+    width: 100%;
+
 
 }
 
@@ -344,6 +364,12 @@ body {
 #hero > img {
     width: 174px; 
 }
+
+#top-bar {
+    visibility: hidden;
+
+}
+
 
 #hero-text :nth-child(1) {
 

@@ -15,11 +15,11 @@
 </head>
 <script async data-id="101496274" src="//static.getclicky.com/js"></script>
 
-<body>
+<body >
 
 
     <div class = 'nav-menu'>
-        <i  onclick="menuIcon()" class="material-icons menu-icon">menu</i>
+        <i  onclick="menuIcon(event)" class="material-icons menu-icon">menu</i>
 
         <div class="nav-links">
             <a href="#portfolio">PORTFOLIO</a>
@@ -91,6 +91,7 @@
 
             <div class="work" style="background: beige">
 
+
                 <div class = 'thumbnail'>
                     <a href="#">
                         <img src="assets/toolset-hero-good-readability-1-1.png">
@@ -108,6 +109,8 @@
 
                     </div>
                 </div>
+
+ 
 
             </div>
 
@@ -222,7 +225,7 @@
 
 
 
-        <div style=" height: 200px;">
+        <div id= 'res-soc'>
 
             <div class="resume"  >
 
@@ -278,8 +281,27 @@
 
     <script>
 
+        document.addEventListener('click', function() {
 
-        function menuIcon () {
+
+            let navLinks = document.querySelector(".nav-links")
+
+            let menuIcon = document.querySelector('.menu-icon')
+
+            if (navLinks.classList.contains('shown')) {
+                navLinks.classList.remove('shown')
+                menuIcon.innerHTML = 'menu'
+
+            }
+
+
+        })
+
+
+        //mobile menue togle
+        function menuIcon (event) {
+
+            event.stopPropagation();
             let navLinks = document.querySelector(".nav-links")
 
             let menuIcon = document.querySelector('.menu-icon')
@@ -301,20 +323,21 @@
 
 
 
-        const observer = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             // entry.isIntersecting is true when the element enters the viewport
             if (entry.isIntersecting) {
-
+                console.log(1)
 
                 let links = document.querySelectorAll('.nav-links > a')
                 links.forEach (link => {
-                    if (link.href === `http://127.0.0.1:5500/onePage.html#${entry.target.id}`) {
-                        link.style.color = 'orange'
+
+                    if (link.getAttribute("href").substring(1) === entry.target.id) {
+                        link.classList.add('active')
                     }
                     else {
 
-                        link.style.color = '#69757d'
+                        link.classList.remove('active')
 
                     }
                 })
@@ -325,13 +348,20 @@
             }
         });
         }, {
-        threshold: 0.5 // Trigger when 60% of the element is visible
+        threshold: 0.3 // Trigger when 60% of the element is visible
         });
 
         // 2. Tell it which elements to watch
         document.querySelectorAll('#hero, #portfolio, #about, #contact').forEach(section => {
         observer.observe(section);
         });
+
+
+
+
+
+
+
 
 
     </script>

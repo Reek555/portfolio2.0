@@ -15,6 +15,13 @@ a {
 }
 
 
+
+#portfolio, #contact {
+    padding-top: 67px;
+    background: none;
+    margin-top: -67px;
+}
+
 /* navigation bar */
 
 
@@ -25,6 +32,7 @@ a {
     top: 0;
     border-bottom: solid 1px #69757d;
     padding: 20px 0;
+    z-index: 1;
 
 }
 
@@ -51,6 +59,10 @@ a {
     color: orange;
 }
 
+.nav-links > .active {
+    color: orange
+
+}
 
 /* hero */
 
@@ -159,6 +171,7 @@ a {
 
 /* the portfolio section  */
 
+
 .section-title {
 
     text-align: center;
@@ -205,6 +218,10 @@ a {
     padding-top: 42px;
     padding-left: 84px;
     width: 50%;
+}
+
+.dynamic {
+    order: 1
 }
 
 .work-title {
@@ -278,16 +295,30 @@ a {
     text-align: center;
 }
 
+
+:root {
+  /* 1. Define the default shadow color */
+  --shadow-color: rgba(99, 99, 99, 0.2) ; 
+}
+
 .card {
     display: inline-block;
     width: 285px;
     text-align: center;
     margin: auto;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: var(--shadow-color) 0px 2px 8px 0px;
     padding: 25px 0;
     margin: 16px;
+
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+
 }
 
+.card:hover {
+    transform: scale(1.1);
+    --shadow-color: lightblue ; 
+}
 
 .card-icon {
 
@@ -337,7 +368,7 @@ footer {
 
 
 
-footer > div:first-child {
+#res-soc {
 
     height: 200px;
 }
@@ -435,7 +466,6 @@ body {
 
 
 
-
 .nav-menu {
     padding: unset;
 }
@@ -456,8 +486,9 @@ body {
     color: #69757d;
     font-size: 16px;
     text-decoration: none;
-    margin: 13px 0;
+    margin: 13px auto;
     display: block;
+    width: fit-content;
 }
 
 .shown {
@@ -497,27 +528,54 @@ body {
 
 
 
-#works-container {
-    justify-content: center;
+.work {
+    display: flex;
+
 }
 
-
 .thumbnail {
-    padding-left: 18px;
-    width: 100%;
-    margin-bottom: 0;
+
     height: 50vh;
+    padding: 0; 
+	margin: 0; 
+	width: 90%; 
+	margin: auto;
+    margin-bottom: 0;
+
 }
 
 .excerpt {
-    width: 100%;
-    margin-bottom: 56px;
-    padding-right: 18px;
+
+    order:1;
+
+    padding: 0; 
+	margin: 0; 
+	width: 90%; 
+	margin: auto; 
+	margin-top: 20px
+
+}
+
+
+.excerpt > p {
+    margin: 0;
+    margin-top: 5px;
+    font-size: 15px;
+
+}
+
+.dynamic {
+    order: 0;
 }
 
 .work-title {
     margin: 0;
+    font-size: 28px; 
 }
+
+
+
+
 
 
 
@@ -539,6 +597,37 @@ body {
 
 
 
+#res-soc {
+
+    height: fit-content;
+    padding-top: 18px;
+}
+
+
+.resume, .social{
+
+    float: none; 
+    height: fit-content;
+    padding: 0; 
+    margin: auto; 
+    margin-top: 53px;
+
+
+}
+
+.social {
+
+    margin-top: 115px
+
+}
+
+
+.copyright{
+
+    margin-top: 0px;
+    padding: 30px;
+    font-size: 14px;
+}
 
 .footer-links {
 
